@@ -24,6 +24,7 @@ classes = 'NONE ONE TWO THREE FOUR FIVE'.split()
 def initClass(name):
     global className, count
     className = name
+#     Make data folder in the current directory
     os.system('mkdir -p data/%s' % name)
     count = len(os.listdir('data/%s' % name))
 
@@ -44,7 +45,7 @@ def main():
 
     model = load_model('model_6cat.h5')
 
-    x0, y0, width = 200, 220, 300
+    x0, y0, width = 200, 180, 300
 
     cam = cv2.VideoCapture(0)
     cv2.namedWindow('Original', cv2.WINDOW_NORMAL)
